@@ -1,5 +1,5 @@
-import { Suspense } from 'react'
+import * as React from 'react'
 
-const Suspense = () => {
-  return <Suspense></Suspense>
-}
+const App: React.FunctionComponent = () => <div />
+
+export default App
