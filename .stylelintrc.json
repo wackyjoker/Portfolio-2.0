@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "extends": "stylelint-config-recommended",
+  "rules": {
+    "indentation": "tab",
+    "number-leading-zero": null,
+    "scss/dollar-variable-pattern": "^foo",
+    "scss/selector-no-redundant-nesting-selector": true,
+    "rule-empty-line-before": "always-multi-line",
+    "max-empty-lines": 1
+  }
+}
