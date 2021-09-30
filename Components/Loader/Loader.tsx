@@ -5,7 +5,7 @@ const Loader: React.FunctionComponent = () => (
 
   <div className={styles.loaderContainer}>
     <div className={styles.loader} />
-    <p>Loading</p>
+    <p>Loading...</p>
   </div>
 )
 
