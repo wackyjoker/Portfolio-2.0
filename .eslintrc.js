@@ -35,7 +35,6 @@ module.exports = {
 
     'import/extensions': [
       'error',
-      'ignorePackages',
       {
         ts: 'never',
         tsx: 'never',
@@ -46,5 +45,10 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': ['error', { variables: false }],
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
+    'jsx-a11y/anchor-is-valid': ['error', {
+      components: ['Link'],
+      specialLink: ['hrefLeft', 'hrefRight'],
+      aspects: ['invalidHref', 'preferButton'],
+    }],
   },
 }

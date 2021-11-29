@@ -6,6 +6,7 @@ import Loader from '../components/Loader'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false)
+  console.log('project started')
   Router.events.on('routeChangeStart', () => {
     console.log('router is changing')
     setLoading(true)
