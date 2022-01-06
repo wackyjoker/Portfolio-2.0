@@ -2,9 +2,10 @@ import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
 import Router from 'next/router'
 import { useState } from 'react'
+import { ChakraProvider } from '@chakra-ui/react'
 import Loader from '../components/Loader'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false)
   console.log('project started')
   Router.events.on('routeChangeStart', () => {
@@ -18,8 +19,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       {loading && <Loader />}
-      <Component {...pageProps} />
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>
     </>
   )
 }
-export default MyApp
+export default App
