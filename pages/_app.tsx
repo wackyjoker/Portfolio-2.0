@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import Router from 'next/router'
 import { useState } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
-import Loader from '../components/Loader'
+import Loader from '@/components/Loader'
 
 function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false)

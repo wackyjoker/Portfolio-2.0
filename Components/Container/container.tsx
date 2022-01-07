@@ -33,6 +33,7 @@ export default function Container(props) {
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
         {children}
