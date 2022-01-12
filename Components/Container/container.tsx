@@ -1,13 +1,15 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import { useTheme } from 'next-themes'
-import NextLink from 'next/link'
+import { Box, Container as ChakraContainer } from '@chakra-ui/react'
+// import { useTheme } from 'next-themes'
+// import NextLink from 'next/link'
+import MenuBar from '@/components/MenuBar'
 import Footer from '../Footer'
 
 export default function Container(props) {
   const [mounted, setMounted] = useState(false)
-  const { resolvedTheme, setTheme } = useTheme()
+  // const { resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => setMounted(true), [])
 
@@ -22,7 +24,7 @@ export default function Container(props) {
   }
 
   return (
-    <div>
+    <Box as="main" pb={8}>
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -36,9 +38,12 @@ export default function Container(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        {children}
+        <MenuBar path={router.asPath} />
+        <ChakraContainer maxW="container.md" pt={14}>
+          {children}
+        </ChakraContainer>
         <Footer />
       </main>
-    </div>
+    </Box>
   )
 }

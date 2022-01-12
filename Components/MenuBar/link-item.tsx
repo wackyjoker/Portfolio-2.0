@@ -5,9 +5,9 @@ import {
 } from '@chakra-ui/react'
 import { ILinkItem } from './types'
 
-type ChakraAndNextProps = NextLinkProps & LinkProps & ILinkItem
+type NextAndChakraProps = NextLinkProps & LinkProps & ILinkItem
 
-const LinkItem:FC<ChakraAndNextProps> = ({
+const LinkItem:FC<NextAndChakraProps> = ({
   href, path, _target, children, ...props
 }) => {
   const active = path === href

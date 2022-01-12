@@ -1,13 +1,16 @@
 import {
   Container, Box, Flex, Menu, Stack, Heading, MenuItem,
   MenuList, Link,
-  MenuButton, useColorModeValue,
+  MenuButton, useColorModeValue, IconButton,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { IoLogoGithub } from 'react-icons/io5'
+import { GoThreeBars } from 'react-icons/go'
+import Logo from '@/components/Logo'
 import LinkItem from './link-item'
+import ThemeToggleButton from '@/components/ThemeToggleButton'
 
-const Navbar = (props) => {
+const Navbar = (props:any) => {
   const { path } = props
 
   return (
@@ -69,7 +72,7 @@ const Navbar = (props) => {
             <Menu isLazy id="navbar-menu">
               <MenuButton
                 as={IconButton}
-                icon={<HamburgerIcon />}
+                icon={<GoThreeBars />}
                 variant="outline"
                 aria-label="Options"
               />
