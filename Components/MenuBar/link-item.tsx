@@ -1,9 +1,13 @@
-import React from 'react'
-import NextLink from 'next/link'
-import { Link, useColorModeValue } from '@chakra-ui/react'
+import { FC } from 'react'
+import NextLink, { LinkProps as NextLinkProps } from 'next/link'
+import {
+  Link, useColorModeValue, LinkProps,
+} from '@chakra-ui/react'
 import { ILinkItem } from './types'
 
-const LinkItem:React.FC<ILinkItem> = ({
+type ChakraAndNextProps = NextLinkProps & LinkProps & ILinkItem
+
+const LinkItem:FC<ChakraAndNextProps> = ({
   href, path, _target, children, ...props
 }) => {
   const active = path === href
