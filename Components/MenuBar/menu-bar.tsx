@@ -45,11 +45,14 @@ const Navbar = (props:any) => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
+          <LinkItem href="/" path={path}>
+            Home
+          </LinkItem>
           <LinkItem href="/works" path={path}>
             Works
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
-            Posts
+          <LinkItem href="/about" path={path}>
+            About
           </LinkItem>
           <LinkItem
             _target="_blank"
@@ -78,13 +81,13 @@ const Navbar = (props:any) => {
               />
               <MenuList>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem as={Link}>Home</MenuItem>
                 </NextLink>
                 <NextLink href="/works" passHref>
                   <MenuItem as={Link}>Works</MenuItem>
                 </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
+                <NextLink href="/about" passHref>
+                  <MenuItem as={Link}>About</MenuItem>
                 </NextLink>
                 <MenuItem
                   as={Link}
