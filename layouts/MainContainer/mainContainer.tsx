@@ -5,9 +5,9 @@ import { Box, Container as ChakraContainer } from '@chakra-ui/react'
 // import { useTheme } from 'next-themes'
 // import NextLink from 'next/link'
 import MenuBar from '@/components/MenuBar'
-import Footer from '../Footer'
+import Footer from '@/components/Footer'
 
-export default function Container(props) {
+export default function MainContainer(props:any) {
   const [mounted, setMounted] = useState(false)
   // const { resolvedTheme, setTheme } = useTheme()
 
