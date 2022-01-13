@@ -2,12 +2,13 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { Box, Container as ChakraContainer } from '@chakra-ui/react'
+import { MainContainerProps } from './types'
 // import { useTheme } from 'next-themes'
 // import NextLink from 'next/link'
 import MenuBar from '@/components/MenuBar'
 import Footer from '@/components/Footer'
 
-export default function MainContainer(props:any) {
+export default function MainContainer(props:MainContainerProps) {
   const [mounted, setMounted] = useState(false)
   // const { resolvedTheme, setTheme } = useTheme()
 

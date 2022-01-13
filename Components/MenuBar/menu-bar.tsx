@@ -36,14 +36,14 @@ const Navbar = (props:any) => {
             <Logo />
           </Heading>
         </Flex>
-
+        {/* Desktop view */}
         <Stack
-          direction={{ base: 'column', md: 'row' }}
-          display={{ base: 'none', md: 'flex' }}
-          width={{ base: 'full', md: 'auto' }}
+          direction={{ base: 'column', sm: 'row' }}
+          display={{ base: 'none', sm: 'flex' }}
+          width={{ base: 'full', sm: 'auto' }}
           alignItems="center"
           flexGrow={1}
-          mt={{ base: 4, md: 0 }}
+          mt={{ base: 4, sm: 0 }}
         >
           <LinkItem href="/" path={path}>
             Home
@@ -67,11 +67,11 @@ const Navbar = (props:any) => {
             Source
           </LinkItem>
         </Stack>
-
+        {/* Mobile view */}
         <Box flex={1} align="right">
           <ThemeToggleButton />
 
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+          <Box ml={2} display={{ base: 'inline-block', sm: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
                 as={IconButton}
