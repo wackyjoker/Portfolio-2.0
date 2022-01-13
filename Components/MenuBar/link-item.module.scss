@@ -1,0 +1,30 @@
+.link{
+    &-dark{
+        position:relative;
+        &:after{
+            content: '';
+            margin:auto;
+            height: 4px;
+            width: 50%;
+            background: #FC8181;
+            position: absolute;
+            bottom :0;
+            left: 25%;
+            display:block;
+            }
+        }
+    &-light{
+        position:relative;
+        &:after{
+            content: '';
+            margin:auto;
+            height: 4px;
+            width: 50%;
+            background: #ED64A6;
+            position: absolute;
+            bottom :0;
+            left: 25%;
+            display:block;
+            }
+        }
+    }

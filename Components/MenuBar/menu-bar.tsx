@@ -45,18 +45,18 @@ const Navbar = (props:any) => {
           flexGrow={1}
           mt={{ base: 4, sm: 0 }}
         >
-          <LinkItem href="/" path={path}>
+          <LinkItem href="/" path={path} arial-label="Home">
             Home
           </LinkItem>
-          <LinkItem href="/works" path={path}>
+          <LinkItem href="/works" path={path} arial-label="Works">
             Works
           </LinkItem>
-          <LinkItem href="/about" path={path}>
+          <LinkItem href="/about" path={path} arial-label="About">
             About
           </LinkItem>
           <LinkItem
             _target="_blank"
-            href="https://github.com/craftzdog/craftzdog-homepage"
+            href="https://github.com/wackyjoker/Portfolio-2.0"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -77,21 +77,21 @@ const Navbar = (props:any) => {
                 as={IconButton}
                 icon={<GoThreeBars />}
                 variant="outline"
-                aria-label="Options"
+                aria-label="Open Menu"
               />
               <MenuList>
-                <NextLink href="/" passHref>
+                <NextLink href="/" passHref arial-label="Home">
                   <MenuItem as={Link}>Home</MenuItem>
                 </NextLink>
-                <NextLink href="/works" passHref>
+                <NextLink href="/works" passHref arial-label="Work">
                   <MenuItem as={Link}>Works</MenuItem>
                 </NextLink>
-                <NextLink href="/about" passHref>
+                <NextLink href="/about" passHref arial-label="About">
                   <MenuItem as={Link}>About</MenuItem>
                 </NextLink>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/wackyjoker"
+                  href="https://github.com/wackyjoker/Portfolio-2.0"
                 >
                   View Source
                 </MenuItem>
