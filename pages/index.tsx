@@ -7,7 +7,6 @@ import MainContainer from '@/layouts/MainContainer'
 const Home: NextPage = () => (
   <div className={styles.container}>
     <MainContainer>
-      <img src="https://philchoi.ca/img/c51.a2f24061.jpg" alt="img" />
       <Text
         bgGradient="linear(to-l, #7928CA, #FF0080)"
         bgClip="text"
