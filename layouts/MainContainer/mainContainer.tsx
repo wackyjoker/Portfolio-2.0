@@ -42,7 +42,7 @@ export default function MainContainer(props:MainContainerProps) {
         <MenuBar path={router.asPath} />
         <ChakraContainer maxW="container.md" pt={14}>
           {children}
-           <Footer />
+          <Footer />
         </ChakraContainer>
       </main>
     </Box>
