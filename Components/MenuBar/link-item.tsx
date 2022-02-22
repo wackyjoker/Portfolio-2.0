@@ -31,7 +31,7 @@ const LinkItem:FC<NextAndChakraProps> = ({
             width: '50%',
             transition: 'all 0.3s ease-out',
             transformOrigin: 'center',
-            transform: 'scaleX(100%)',
+            transform: 'scaleX(1)',
             background: linkPseudoColor,
           },
         }}

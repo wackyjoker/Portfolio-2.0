@@ -31,7 +31,7 @@ const Navbar = (props:any) => {
         align="center"
         justify="space-between"
       >
-        <Flex align="center" mr={5}>
+        <Flex align="flex-start" mr={5}>
           <Heading as="h1" size="lg" letterSpacing="tighter">
             <Logo />
           </Heading>

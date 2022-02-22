@@ -4,11 +4,12 @@
         content: '';
         margin:auto;
         height: 4px;
-        width: 0;
+        width: 50%;
         position: absolute;
         bottom: 0;
         left: 25%;
         display: block;
+        transform: scaleX(0);
         transition: all 0.3s ease-out;
         transform-origin: center;
         overflow:visible;
@@ -17,7 +18,7 @@
         position:relative;
         &:after{
             @extend .link;
-            width: 50%;
+            transform :scaleX(1);
             background: #FC8181;
             transition:none;
             }
@@ -26,7 +27,7 @@
     &--light{
         position:relative;
         &:after{
-            @extend .link;
+            transform :scaleX(1);
             width: 50%;
             background: #ED64A6;
             transition:none;
