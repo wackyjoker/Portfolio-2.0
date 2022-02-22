@@ -7,6 +7,7 @@ const LogoBox = styled.span`
   letter-spacing: 1px;
   font-weight: bold;
   font-size: 28px;
+  white-space:nowrap;
   display: inline-flex;
   align-items: center;
   height: 30px;

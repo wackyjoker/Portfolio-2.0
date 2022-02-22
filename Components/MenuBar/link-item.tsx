@@ -16,14 +16,25 @@ const LinkItem:FC<NextAndChakraProps> = ({
   const { colorMode } = useColorMode()
   const linkColor = useColorModeValue('gray.700', 'whiteAlpha.900')
   const linkHoverColor = useColorModeValue('pink.400', 'red.200')
+  const linkPseudoColor = useColorModeValue('#ED64A6', '#FC8181')
   const isActive = useRouter().pathname === href
+
   return (
     <NextLink href={href} passHref>
       <Link
-        className={isActive ? styles[`link-${colorMode}`] : undefined}
+        className={isActive ? styles[`link--${colorMode}`] : styles.link}
         p={2}
         color={linkColor}
-        _hover={{ color: linkHoverColor }}
+        _hover={{
+          color: linkHoverColor,
+          _after: {
+            width: '50%',
+            transition: 'all 0.3s ease-out',
+            transformOrigin: 'center',
+            transform: 'scaleX(100%)',
+            background: linkPseudoColor,
+          },
+        }}
         borderColor={linkHoverColor}
         fontWeight={isActive ? 'bold' : undefined}
         _target={_target}

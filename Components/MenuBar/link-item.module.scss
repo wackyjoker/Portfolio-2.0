@@ -1,31 +1,35 @@
 .link{
-    &-dark{
+    position:relative;
+    &:after{
+        content: '';
+        margin:auto;
+        height: 4px;
+        width: 0;
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        display: block;
+        transition: all 0.3s ease-out;
+        transform-origin: center;
+        overflow:visible;
+    }
+    &--dark{
         position:relative;
         &:after{
-            content: '';
-            margin:auto;
-            height: 4px;
+            @extend .link;
             width: 50%;
             background: #FC8181;
-            position: absolute;
-            bottom :0;
-            left: 25%;
-            display:block;
+            transition:none;
             }
 
         }
-    &-light{
+    &--light{
         position:relative;
         &:after{
-            content: '';
-            margin:auto;
-            height: 4px;
+            @extend .link;
             width: 50%;
             background: #ED64A6;
-            position: absolute;
-            bottom :0;
-            left: 25%;
-            display:block;
+            transition:none;
             }
         }
     }
