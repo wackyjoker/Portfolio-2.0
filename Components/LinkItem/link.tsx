@@ -6,7 +6,7 @@ import {
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { ILinkItem } from './types'
-import styles from './link-item.module.scss'
+import styles from './link.module.scss'
 
 type NextAndChakraProps = NextLinkProps & LinkProps & ILinkItem
 

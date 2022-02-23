@@ -10,13 +10,10 @@ function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     setLoading(true)
   }, [])
-  console.log('project started')
   Router.events.on('routeChangeStart', () => {
-    console.log('router is changing')
     setLoading(false)
   })
   Router.events.on('routeChangeComplete', () => {
-    console.log('router is completed')
     setLoading(true)
   })
   return (

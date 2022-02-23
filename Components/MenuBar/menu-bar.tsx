@@ -7,7 +7,7 @@ import NextLink from 'next/link'
 import { IoLogoGithub } from 'react-icons/io5'
 import { GoThreeBars } from 'react-icons/go'
 import Logo from '@/components/Logo'
-import LinkItem from './link-item'
+import LinkItem from '@/components/LinkItem'
 import ThemeToggleButton from '@/components/ThemeToggleButton'
 
 const Navbar = (props:any) => {
