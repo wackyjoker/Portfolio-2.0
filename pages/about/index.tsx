@@ -1,8 +1,8 @@
-import React from 'react'
+import { FC } from 'react'
 import Link from 'next/link'
 import MainContainer from '@/layouts/MainContainer'
 
-const About:React.FunctionComponent = () => (
+const About:FC = () => (
   <MainContainer>
     <div>
       <h1>Hey this is me</h1>
@@ -11,7 +11,5 @@ const About:React.FunctionComponent = () => (
       </Link>
     </div>
   </MainContainer>
-
 )
-
 export default About
