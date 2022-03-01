@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import NextLink from 'next/link'
 import Image from 'next/image'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
@@ -20,13 +20,17 @@ const LogoBox = styled.span`
     transform: rotate(20deg);
   }
 `
+const LogoAnchor = styled.a`
+  display:flex;
+  cursor:pointer;
+`
 
 const Logo = () => {
   const footPrintImg = `/images/claw${useColorModeValue('', '-dark')}.svg`
 
   return (
-    <Link href="/">
-      <a>
+    <NextLink href="/">
+      <LogoAnchor>
         <LogoBox>
           <Image src={footPrintImg} width={20} height={20} alt="logo" />
           <Text
@@ -38,8 +42,8 @@ const Logo = () => {
             Kevin Young
           </Text>
         </LogoBox>
-      </a>
-    </Link>
+      </LogoAnchor>
+    </NextLink>
   )
 }
 

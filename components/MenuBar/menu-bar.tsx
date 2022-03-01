@@ -27,15 +27,13 @@ const Navbar = (props:any) => {
         display="flex"
         p={2}
         maxW="container.md"
-        wrap="wrap"
-        align="center"
-        justify="space-between"
+        flexWrap="wrap"
+        alignItems="center"
+        justifyContent="space-between"
       >
-        <Flex align="flex-start" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing="tighter">
-            <Logo />
-          </Heading>
-        </Flex>
+        <Heading as="h1" size="lg" letterSpacing="tighter" mr={5} aria-label="Kevin Young">
+          <Logo />
+        </Heading>
         {/* Desktop view */}
         <Stack
           direction={{ base: 'column', sm: 'row' }}
@@ -68,7 +66,7 @@ const Navbar = (props:any) => {
           </LinkItem>
         </Stack>
         {/* Mobile view */}
-        <Box flex={1} align="right">
+        <Box flex={1} alignItems="right">
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', sm: 'none' }}>
