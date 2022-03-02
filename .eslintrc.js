@@ -21,9 +21,11 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'no-var': 'warn',
     semi: ['error', 'never'],
     '@typescript-eslint/semi': 'off',
     quotes: ['error', 'single'],
+    'max-len': ['error', { code: 100, tabWidth: 2 }],
     'no-console': ['error', { allow: [''] }],
     indent: ['error', 2],
     'no-tabs': 'error',
@@ -40,7 +42,8 @@ module.exports = {
         tsx: 'never',
       },
     ],
-    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.test.tsx', '**/*.spec.tsx'] }],
+    'import/no-extraneous-dependencies':
+      ['error', { devDependencies: ['**/*.test.tsx', '**/*.spec.tsx'] }],
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error', { variables: false }],
     'no-shadow': 'off',

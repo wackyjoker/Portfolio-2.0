@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 // import Image from 'next/image'
 import { Text } from '@chakra-ui/react'
-import styles from '../styles/Home.module.scss'
 import MainContainer from '@/layouts/MainContainer'
+import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => (
   <div className={styles.container}>
