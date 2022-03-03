@@ -3,11 +3,13 @@ import { useEffect, useState } from 'react'
 import type { AppProps } from 'next/app'
 import Router from 'next/router'
 import { ChakraProvider } from '@chakra-ui/react'
-import Loader from '@/components/Loader'
+import Loader, { FirstLoader } from '@/components/Loader'
 
 function App({ Component, pageProps }: AppProps) {
+  const [firstLoad, setFirstLoading] = useState(false)
   const [loading, setLoading] = useState(false)
   useEffect(() => {
+    setFirstLoading(true)// on first load
     setLoading(true)
   }, [])
   Router.events.on('routeChangeStart', () => {
@@ -18,13 +20,16 @@ function App({ Component, pageProps }: AppProps) {
   })
   return (
     <>
-      <ChakraProvider>
-        {loading ? (
+      {firstLoad
+        ? (
+          <ChakraProvider>
+            {loading ? (
 
-          <Component {...pageProps} />
+              <Component {...pageProps} />
 
-        ) : <Loader />}
-      </ChakraProvider>
+            ) : <Loader />}
+          </ChakraProvider>
+        ) : <FirstLoader />}
 
     </>
   )

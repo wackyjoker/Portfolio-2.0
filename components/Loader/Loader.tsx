@@ -1,5 +1,4 @@
 import React from 'react'
-// import styles from './Loader.module.scss'
 import styled from '@emotion/styled'
 import { useColorModeValue } from '@chakra-ui/react'
 
@@ -21,7 +20,7 @@ const Balls = styled.div<{ theme: string }>`
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background:  ${(props) => props.theme} ;
+    background:  ${(props) => props.theme ?? '#ED64A6'} ;
     margin: 0 6px 0 0;
     animation: oscillate 0.7s ease-in forwards infinite;
   }
@@ -53,6 +52,7 @@ height:100vh;
 width:100%;
 position:relative;
 padding:1em;
+background:
 `
 
 const Loader = () => {
