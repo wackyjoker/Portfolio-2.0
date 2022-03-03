@@ -3,7 +3,6 @@ import Loader from '@/components/Loader'
 
 const App: React.FunctionComponent = () => (
   <div>
-    {' '}
     <Loader />
   </div>
 )

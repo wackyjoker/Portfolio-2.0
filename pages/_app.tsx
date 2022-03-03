@@ -2,7 +2,7 @@ import '../styles/globals.scss'
 import { useEffect, useState } from 'react'
 import type { AppProps } from 'next/app'
 import Router from 'next/router'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, useColorModeValue } from '@chakra-ui/react'
 import Loader, { FirstLoader } from '@/components/Loader'
 
 function App({ Component, pageProps }: AppProps) {
@@ -18,6 +18,7 @@ function App({ Component, pageProps }: AppProps) {
   Router.events.on('routeChangeComplete', () => {
     setLoading(true)
   })
+  const ballColor = useColorModeValue('#ED64A6', '#FC8181')
   return (
     <>
       {firstLoad
@@ -27,7 +28,7 @@ function App({ Component, pageProps }: AppProps) {
 
               <Component {...pageProps} />
 
-            ) : <Loader />}
+            ) : <Loader ballColor={ballColor} />}
           </ChakraProvider>
         ) : <FirstLoader />}
 
