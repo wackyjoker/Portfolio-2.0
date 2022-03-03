@@ -1,14 +1,16 @@
 import React from 'react'
 // import styles from './Loader.module.scss'
 import styled from '@emotion/styled'
+import { useColorModeValue } from '@chakra-ui/react'
+
 // const Loader: React.FunctionComponent = () => (
 
 //   <div className={styles.loaderContainer}>
 //     <div className={styles.loader} />
 //     <p>Loading...</p>
 //   </div>
-
-const Balls = styled.div`
+// const ballColor = useColorModeValue('pink.400', 'red.200')
+const Balls = styled.div<{ theme: string }>`
   display: flex;
   position: absolute;
   top: 50%;
@@ -19,7 +21,7 @@ const Balls = styled.div`
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background: #1b5299;
+    background:  ${(props) => props.theme} ;
     margin: 0 6px 0 0;
     animation: oscillate 0.7s ease-in forwards infinite;
   }
@@ -46,16 +48,24 @@ const Balls = styled.div`
     }
   }
 `
-const Screen = styled.div``
+const Screen = styled.div`
+height:100vh;
+width:100%;
+position:relative;
+padding:1em;
+`
 
-const Loader = () => (
-  <Screen>
-    <Balls>
-      <div className="ball one" />
-      <div className="ball two" />
-      <div className="ball three" />
-    </Balls>
-  </Screen>
-)
+const Loader = () => {
+  const ballColor = useColorModeValue('#ED64A6', '#FC8181')
+  return (
+    <Screen>
+      <Balls theme={ballColor}>
+        <div className="ball one" />
+        <div className="ball two" />
+        <div className="ball three" />
+      </Balls>
+    </Screen>
+  )
+}
 
 export default Loader

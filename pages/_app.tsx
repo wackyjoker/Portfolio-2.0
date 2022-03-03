@@ -18,11 +18,13 @@ function App({ Component, pageProps }: AppProps) {
   })
   return (
     <>
-      {loading ? (
-        <ChakraProvider>
+      <ChakraProvider>
+        {loading ? (
+
           <Component {...pageProps} />
-        </ChakraProvider>
-      ) : <Loader />}
+
+        ) : <Loader />}
+      </ChakraProvider>
 
     </>
   )

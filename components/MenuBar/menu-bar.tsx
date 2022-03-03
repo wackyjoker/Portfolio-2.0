@@ -1,5 +1,5 @@
 import {
-  Container, Box, Flex, Menu, Stack, Heading, MenuItem,
+  Container, Box, Menu, Stack, Heading, MenuItem,
   MenuList, Link,
   MenuButton, useColorModeValue, IconButton,
 } from '@chakra-ui/react'
@@ -10,7 +10,7 @@ import Logo from '@/components/Logo'
 import LinkItem from '@/components/LinkItem'
 import ThemeToggleButton from '@/components/ThemeToggleButton'
 
-const Navbar = (props:any) => {
+const Navbar = (props: any) => {
   const { path } = props
 
   return (
