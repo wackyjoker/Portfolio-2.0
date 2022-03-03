@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import type { AppProps } from 'next/app'
 import Router from 'next/router'
 import { ChakraProvider, useColorModeValue } from '@chakra-ui/react'
-import Loader, { FirstLoader } from '@/components/Loader'
+import Loader from '@/components/Loader'
 
 function App({ Component, pageProps }: AppProps) {
   const [firstLoad, setFirstLoading] = useState(false)
@@ -30,7 +30,7 @@ function App({ Component, pageProps }: AppProps) {
 
             ) : <Loader ballColor={ballColor} />}
           </ChakraProvider>
-        ) : <FirstLoader />}
+        ) : <Loader />}
 
     </>
   )

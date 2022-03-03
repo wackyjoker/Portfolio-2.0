@@ -51,16 +51,15 @@ height:100vh;
 width:100%;
 position:relative;
 padding:1em;
-background:
 `
 
 type ILoader = {
-  ballColor:string
+  ballColor?: string
 }
 
-const Loader:FC<ILoader> = (props = { ballColor: '#FC8181' }) => (
+const Loader: FC<ILoader> = ({ ballColor = '#ED64A6' }) => (
   <Screen>
-    <Balls theme={props.ballColor}>
+    <Balls theme={ballColor}>
       <div className="ball one" />
       <div className="ball two" />
       <div className="ball three" />

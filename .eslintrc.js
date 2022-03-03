@@ -21,6 +21,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'react/require-default-props': 'off',
     'no-var': 'warn',
     semi: ['error', 'never'],
     '@typescript-eslint/semi': 'off',
