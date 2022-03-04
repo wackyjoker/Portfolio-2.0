@@ -53,11 +53,7 @@ position:relative;
 padding:1em;
 `
 
-type ILoader = {
-  ballColor?: string
-}
-
-const Loader: FC<ILoader> = ({ ballColor = '#ED64A6' }) => (
+const Loader: FC<{ballColor?:string}> = ({ ballColor = '#ED64A6' }) => (
   <Screen>
     <Balls theme={ballColor}>
       <div className="ball one" />

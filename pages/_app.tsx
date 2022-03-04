@@ -6,31 +6,29 @@ import { ChakraProvider, useColorModeValue } from '@chakra-ui/react'
 import Loader from '@/components/Loader'
 
 function App({ Component, pageProps }: AppProps) {
-  const [firstLoad, setFirstLoading] = useState(false)
+  const [firstLoad, setFirstLoading] = useState(true)
   const [loading, setLoading] = useState(false)
   useEffect(() => {
-    setFirstLoading(true)// on first load
-    setLoading(true)
+    setFirstLoading(false)// on first load
   }, [])
   Router.events.on('routeChangeStart', () => {
-    setLoading(false)
+    setLoading(true)
   })
   Router.events.on('routeChangeComplete', () => {
-    setLoading(true)
+    setLoading(false)
   })
   const ballColor = useColorModeValue('#ED64A6', '#FC8181')
   return (
     <>
       {firstLoad
-        ? (
+        ? <Loader /> : (
           <ChakraProvider>
             {loading ? (
+              <Loader ballColor={ballColor} />
 
-              <Component {...pageProps} />
-
-            ) : <Loader ballColor={ballColor} />}
+            ) : <Component {...pageProps} />}
           </ChakraProvider>
-        ) : <Loader />}
+        ) }
 
     </>
   )
